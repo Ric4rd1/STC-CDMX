@@ -18,7 +18,7 @@
 
 class Line {
     private:
-        char name[2];
+        std::string name;
         int numStations;
         int numTrains;
         std::string color;
@@ -30,13 +30,13 @@ class Line {
         //default constructor
         Line();
         //Constructor with parameters
-        Line(char name[2], int numStations, int numTrains,
+        Line(std::string name, int numStations, int numTrains,
              std::string color, int length);
         //Copy constructor
         Line(const Line &l);
 
         //Getters
-        char getName() const {return name[2];}
+        std::string getName() const {return name;}
         int getNumStations() const {return numStations;}
         int getNumTrains() const {return numTrains;}
         std::string getColor() const {return color;}
@@ -45,7 +45,7 @@ class Line {
         std::vector<Train > getTrains() const {return trains;}
 
         //Setters
-        void setName(char name[2]) {this->name[2] = name[2];}
+        void setName(char name) {this->name = name;}
         void setNumStations(int numStations) {this->numStations = numStations;}
         void setNumTrains(int numTrains) {this->numTrains = numTrains;}
         void setColor(std::string color) {this->color = color;}
@@ -64,18 +64,16 @@ class Line {
 };
 
 Line::Line() {
-    this->name[0] = '\0';
-    this->name[1] = '\0';
+    this->name = "";
     this->numStations = 0;
     this->numTrains = 0;
     this->color = "";
     this->length = 0;
 }
 
-Line::Line(char name[2], int numStations, int numTrains,
+Line::Line(std::string name, int numStations, int numTrains,
              std::string color, int length) {
-    this->name[0] = name[0];
-    this->name[1] = name[1];
+    this->name = name;
     this->numStations = numStations;
     this->numTrains = numTrains;
     this->color = color;
@@ -83,8 +81,7 @@ Line::Line(char name[2], int numStations, int numTrains,
 }
 
 Line::Line(const Line &l) {
-    this->name[0] = l.name[0];
-    this->name[1] = l.name[1];
+    this->name = l.name;
     this->numStations = l.numStations;
     this->numTrains = l.numTrains;
     this->color = l.color;

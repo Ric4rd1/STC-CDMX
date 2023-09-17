@@ -12,6 +12,7 @@
 #include <list>
 
 #include "unit.h"
+#include "Stc.h"
 
 template <class T>
 std::string arrayToString(const std::vector<T> &v) {
@@ -47,8 +48,14 @@ class SortsTest: public UnitTest {
 };
 
 int main (){
-    SortsTest test;
-
-    test.runTest();
+    //SortsTest test;
+    //test.runTest();
+	Stc stc;
+	stc.loadLines("Lines.txt");
+	stc.showLines();
+	cout << endl;
+	cout << "Lines sorted by length in Km: " << endl;
+	stc.sortLinesLength();
+	stc.showLines();
     return 0;
 }
