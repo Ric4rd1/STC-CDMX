@@ -11,7 +11,7 @@ Existen __ clases interacutando entre sí en este proyecto:
 - `Station`
 - `Train`
 
-##### STC
+##### Stc
 La clase `Stc` cuenta con las siguentes variables de estado:
 - `lines` : Lista de las lineas que tiene el sistema de transporte del metro
 
@@ -19,7 +19,22 @@ La clase cuenta con los siguentes métodos:
 - Constructor por default
 - Constructor con parametros (lista de Objetos `Line`)
 - Constructor de copia
-- 
+- `void loadLines(string fileName)` : Carga un archivo .txt delimitado por tabs con el formato (nombre de la linea, número de estaciones, número de trenes, color, largo en km) y se almacena en `lines`
+- `void showLines()` : muestra la información de `lines` en la terminal
+- `void sortLinesLength()` : organiza las líneas de menor a mayor conforme a la distancia en km
+
+##### Lines
+La clase `Lines` cuenta con las siguentes variables de estado:
+- `name` : nombre de la línea (Ej: L5)
+- `numStations` : número de estaciones
+- `numTrains` : número de trenes
+- `color` : color de la línea
+- `lenght` : distancia en km total de la línea de inicio a fin
+- `stations` : Lista de estaciones
+- `trains` : Lista de trenes
+
+La clase cuenta con los siguentes métodos:
+
 
 
 ## SICT0302B: Toma decisiones
