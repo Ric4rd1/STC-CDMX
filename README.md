@@ -6,10 +6,10 @@ Hay lineas de metro que contienen estaciones y trenes que viajan entre ellas.
 
 ### Clases
 Existen __ clases interacutando entre sí en este proyecto:
-- `Stc`
-- `Line`
-- `Station`
-- `Train`
+- `Stc` 🚇
+- `Line` 🗺
+- `Station` 🚉
+- `Train` 🚄
 
 #### Stc
 La clase `Stc` cuenta con las siguentes variables de estado:
