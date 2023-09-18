@@ -6,10 +6,10 @@ Hay lineas de metro que contienen estaciones y trenes que viajan entre ellas.
 
 ### Clases
 Existen __ clases interacutando entre sí en este proyecto:
-- `Stc` 🚇
-- `Line` 🗺
-- `Station` 🚉
-- `Train` 🚄
+- `Stc` ## 🚇
+- `Line` ## 🗺
+- `Station` ## 🚉
+- `Train` ## 🚄
 
 #### Stc
 La clase `Stc` cuenta con las siguentes variables de estado:
@@ -55,13 +55,12 @@ Para este problema se utilizó un algoritmo de tipo insertion sort, para poder o
 ## SICT0303B: Implementa acciones científicas
 ### Implementa mecanismos para consultar información de las estructuras correctos y útiles dentro de un programa.
 
-##Recursos
+### Implementa mecanismos de lectura de archivos correctos y útiles dentro de un programa. Usar de manera
+
+### Implementa mecanismos de escritura de archivos correctos y útiles dentro de un programa. Usar de manera
+
+## Recursos
 https://metro.cdmx.gob.mx/storage/app/media/red/plano_red19.pdf
 https://www.metro.cdmx.gob.mx/
 https://www.metro.cdmx.gob.mx/cronologia-del-metro 
 https://www.kaggle.com/code/edherivndazsalazar/afluencia-en-transpote-p-blico-cdmx/input?select=movilidad.csv
-
-
-### Implementa mecanismos de lectura de archivos correctos y útiles dentro de un programa. Usar de manera
-
-### Implementa mecanismos de escritura de archivos correctos y útiles dentro de un programa. Usar de manera
