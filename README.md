@@ -4,14 +4,14 @@ El objetivo principal es analizar el sistema de metro de la CDMX para obtener in
 ## Introducción
 Hay lineas de metro que contienen estaciones y trenes que viajan entre ellas.
 
-#### Clases
+### Clases
 Existen __ clases interacutando entre sí en este proyecto:
 - `Stc`
 - `Line`
 - `Station`
 - `Train`
 
-##### Stc
+#### Stc
 La clase `Stc` cuenta con las siguentes variables de estado:
 - `lines` : Lista de las lineas que tiene el sistema de transporte del metro
 
@@ -23,7 +23,7 @@ La clase cuenta con los siguentes métodos:
 - `void showLines()` : muestra la información de `lines` en la terminal
 - `void sortLinesLength()` : organiza las líneas de menor a mayor conforme a la distancia en km
 
-##### Lines
+#### Lines
 La clase `Lines` cuenta con las siguentes variables de estado:
 - `name` : nombre de la línea (Ej: L5)
 - `numStations` : número de estaciones
@@ -34,6 +34,13 @@ La clase `Lines` cuenta con las siguentes variables de estado:
 - `trains` : Lista de trenes
 
 La clase cuenta con los siguentes métodos:
+- Constructor por default
+- Constructor con parametros (`name`, `numStations`, `numTrains`, `color`, `length`)
+- Constructor de copia
+- `void addStation(Station s)` : Agrega una estación a stations
+- `void addTrain(Train t)` : Agrega un tren a trains
+- `void removeStation(Station s)` : Elimina una estación de stations
+- `void removeTrain(Train t)` : Elimina una estación de stations
 
 
 
