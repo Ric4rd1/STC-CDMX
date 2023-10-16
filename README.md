@@ -68,7 +68,7 @@ Se tienen las siguentes estructuras de datos:
 	- **Random Access o(1)** : los vectores funcionan como arrays utilizando apuntadores al primer elemento y tienendo el tamaño de este, de esta manera utilizando matematicas con los apuntadores se accesa de manera **o(1)**
 	**-Insertar o Eliminar o(n)** : los vectores nativamente no son dinamicos, utilizan copias provisionales para agrandar o reducir su tamaño al tener que recorrer el arreglo se obtiene una complejidad de **o(n)**
 - `stations` (Mapa) **o(n)**
-	- Los mapas utilizan *Arboles* para almacenar los datos almacenados, se utilizan las llaves para buscar la el dato requerido. Los casos promedio para **Accesar, Buscar, Insertar y Borrar ** son de **o(log(n))** y para los peores casos son de o(n)
+	- Los mapas utilizan *Arboles* para almacenar los datos almacenados, se utilizan las llaves para buscar la el dato requerido. Los casos promedio para **Accesar, Buscar, Insertar y Borrar** son de **o(log(n))** y para los peores casos son de **o(n)**
 
 ## SICT0301: Evalúa los componentes
 ### Hace un análisis de complejidad correcto y completo todas las estructuras de datos y cada uno de sus usos en el programa.
