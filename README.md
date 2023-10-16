@@ -78,7 +78,7 @@ Se hace el analisis asintótico en la parte superior de las estructuras de datos
 ### Selecciona y usa una estructura lineal adecuada al problema
 Se utilizó un vector `lines` para almacenar las lineas del metro. Se escojió esta estructura gracias a los beneficios que ofrece para acceder rápidamente a los objetos. Random access - constant 𝓞(1)
 
-###Selecciona una estructura de datos adecuada al problema y lo usa correctamente.
+### Selecciona una estructura de datos adecuada al problema y lo usa correctamente.
 Se utilizan estructuras de datos diferentes:
 - `lines` : Vector de las lineas que tiene el sistema de transporte del metro.
 - `stations` : Mapa de todas las estaciones que tiene el sistema de transporte de metro. Utiliza el nombre (string) de la estación como llave y almacena objetos tipo `Station`.
