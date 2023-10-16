@@ -62,7 +62,7 @@ La clase cuenta con los siguentes métodos:
 - Getters
 - Setters
 
-### Analisis Asintotico :tw-1f409: 
+### Analisis Asintotico 🐉 
 Se tienen las siguentes estructuras de datos:
 - `lines` (vector) **o(n)**
 	- **Random Access o(1)** : los vectores funcionan como arrays utilizando apuntadores al primer elemento y tienendo el tamaño de este, de esta manera utilizando matematicas con los apuntadores se accesa de manera **o(1)**
@@ -72,7 +72,7 @@ Se tienen las siguentes estructuras de datos:
 
 ## SICT0301: Evalúa los componentes
 ### Hace un análisis de complejidad correcto y completo todas las estructuras de datos y cada uno de sus usos en el programa.
-Se hace el analisis asintótico en la parte superior de las estructuras de datos. :tw-1f446:
+Se hace el analisis asintótico en la parte superior de las estructuras de datos. ☝
 
 ## SICT0302B: Toma decisiones
 ### Selecciona y usa una estructura lineal adecuada al problema
