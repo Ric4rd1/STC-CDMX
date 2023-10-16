@@ -1,8 +1,8 @@
 /*
  * Line.h
  *
- *  Created on: 
- *      Author: 
+ *  Created on: 14/10/2023
+ *      Author: ricard
  */
 
 #ifndef LINE_H_
@@ -12,9 +12,13 @@
 #include "Station.h"
 #include "Train.h"
 
+
 #include <vector>
 #include <list>
 #include <string>
+#include <fstream>
+#include <sstream>
+#include <iostream>
 
 class Line {
     private:
@@ -23,8 +27,10 @@ class Line {
         int numTrains;
         std::string color;
         int length;
-        std::vector<Station> stations;
-        std::vector<Train> trains;
+        Train trainsList;
+
+        
+
     public:
         //Constructors
         //default constructor
@@ -41,8 +47,7 @@ class Line {
         int getNumTrains() const {return numTrains;}
         std::string getColor() const {return color;}
         int getLength() const {return length;}
-        std::vector<Station > getStations() const {return stations;}
-        std::vector<Train > getTrains() const {return trains;}
+        Train getTrains() const {return trainsList;}
 
         //Setters
         void setName(char name) {this->name = name;}
@@ -50,17 +55,11 @@ class Line {
         void setNumTrains(int numTrains) {this->numTrains = numTrains;}
         void setColor(std::string color) {this->color = color;}
         void setLength(int length) {this->length = length;}
-        void setStations(std::vector<Station > stations) 
-                         {this->stations = stations;}
-        void setTrains(std::vector<Train > trains) {this->trains = trains;}
+        void setTrains(Train trainsList) {this->trainsList = trainsList;}
 
         //Methods
-        void addStation(Station s);
         void addTrain(Train t);
-        void removeStation(Station s);
         void removeTrain(Train t);
-        
-
 };
 
 Line::Line() {
@@ -87,4 +86,6 @@ Line::Line(const Line &l) {
     this->color = l.color;
     this->length = l.length;
 }
+
+
 #endif /* STATION_H_ */

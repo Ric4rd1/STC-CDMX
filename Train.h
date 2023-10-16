@@ -1,8 +1,8 @@
 /*
  * Train.h
  *
- *  Created on: 05/08/2015
- *      Author: pperezm
+ *  Created on: 14/10/2023
+ *      Author: ricard
  */
 
 #ifndef TRAIN_H_

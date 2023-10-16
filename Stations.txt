@@ -1,0 +1,65 @@
+Observatorio	L1	Observatorio	0	Ubicada en la Alcaldia Alvaro Obregon.	
+Tacubaya	L1	Jarron	1	Ubicada en la Alcaldia Miguel Hidalgo.	
+Juanacatlan	L1	Mariposa	0	Ubicada en la Alcaldia Miguel Hidalgo.	
+Chapultepec	L1	Saltamontes	0	Ubicada en la Alcaldia Cuauhtemoc.	
+Sevilla	L1	Arcos	0	Ubicada en la Alcaldia Cuauhtemoc.	
+Insurgentes	L1	Campana	0	Ubicada en la Alcaldia Cuauhtemoc.	
+Cuautemoc	L1	Aguila	0	Ubicada en la Alcaldia Cuauhtemoc.	
+Balderas	L1	Canon	1	Ubicada en la Alcaldia Cuauhtemoc.	
+Salto del Agua	L1	Fuente	1	Ubicada en la Alcaldia Cuauhtemoc.	
+Isabel la Catolica	L1	Barco	0	Ubicada en la Alcaldia Cuauhtemoc.	
+Pino Suarez	L1	Piramide	1	Ubicada en la Alcaldia Cuauhtemoc.	
+Merced	L1	Tienda	0	Ubicada en la Alcaldia Venustiano Carranza.	
+Candelaria	L1	Pato	1	Ubicada en la Alcaldia Venustiano Carranza.	
+San Lazaro	L1	Tren	1	Ubicada en la Alcaldia Venustiano Carranza.	
+Moctezuma	L1	Penacho	0	Ubicada en la Alcaldia Venustiano Carranza.	
+Balbuena	L1	Flores	0	Ubicada en la Alcaldia Venustiano Carranza.	
+Boulevard Puerto Aereo	L1	Puente	0	Ubicada en la Alcaldia Venustiano Carranza.	
+Gomez Farias	L1	Libro	0	Ubicada en la Alcaldia Venustiano Carranza.	
+Zaragoza	L1	Caballo	0	Ubicada en la Alcaldia Venustiano Carranza.	
+Pantitlan	L1	2 Banderas	1	Ubicada en la Alcaldia Venustiano Carranza.	
+Cuatro Caminos	L2	Cupula	0	Ubicada en el Municipio de Naucalpan de Juarez, Estado de Mexico.	
+Panteones	L2	Tumba	0	Ubicada en la Alcaldia Miguel Hidalgo.	
+Tacuba	L2	Flores	1	Ubicada en la Alcaldia Miguel Hidalgo.	
+Cuitlahuac	L2	Escudo	0	Ubicada en la Alcaldia Miguel Hidalgo.	
+Popotla	L2	Arbol	0	Ubicada en la Alcaldia Miguel Hidalgo.	
+Colegio Militar	L2	Escudo Militar	0	Ubicada en la Alcaldia Miguel Hidalgo.	
+Normal	L2	Edificio	0	Ubicada en la Alcaldia Miguel Hidalgo.	
+San Cosme	L2	Balcon	0	Ubicada en la Alcaldia Cuauhtemoc.	
+Revolucion	L2	Monumento	0	Ubicada en la Alcaldia Cuauhtemoc.	
+Hidalgo	L2	Hidalgo	1	Ubicada en la Alcaldia Cuauhtemoc.	
+Bellas Artes	L2	Palacio	1	Ubicada en la Alcaldia Cuauhtemoc.	
+Allende	L2	Busto	0	Ubicada en la Alcaldia Cuauhtemoc.	
+Zocalo/Tenochtitlan	L2	Aguila	0	Ubicada en la Alcaldia Cuauhtemoc.	
+Pino Suarez	L2	Piramide	1	Ubicada en la Alcaldia Cuauhtemoc.	
+San Antonio Abad	L2	Pastor	0	Ubicada en la Alcaldia Cuauhtemoc.	
+Chabacano	L2	Chabacano	1	Ubicada en la Alcaldia Cuauhtemoc.	
+Viaducto	L2	Trebol	0	Ubicada en la Alcadia Benito Juarez.	
+Xola	L2	Palmera	0	Ubicada en la Alcadia Benito Juarez.	
+Villa de Cortes	L2	Casco	0	Ubicada en la Alcadia Benito Juarez.	
+Nativitas	L2	Trajinera	0	Ubicada en la Alcadia Benito Juarez.	
+Portales	L2	Arcos	0	Ubicada en la Alcadia Benito Juarez.	
+Ermita	L2	Capilla	1	Ubicada en la Alcadia Benito Juarez.	
+General Anaya	L2	General	0	Ubicada en la Alcaldia Coyoacan.	
+Tasquena	L2	Luna	0	Ubicada en la Alcaldia Coyoacan.	
+Indios Verdes	L3	Indios	0	Ubicada en la Alcaldia Gustavo A. Madero.	
+Deportivo 18 de Marzo	L3	Jugador de Pelota	1	Ubicada en la Alcaldia Gustavo A. Madero.	
+Portero	L3	Equino	0	Ubicada en la Alcaldia Gustavo A. Madero.	
+La Raza	L3	Piramide	1	Ubicada en la Alcaldia Gustavo A. Madero.	
+Tlatelolco	L3	Edificio	0	Ubicada en la Alcaldia Cuauhtemoc.	
+Guerrero	L3	General	1	Ubicada en la Alcaldia Cuauhtemoc.	
+Hidalgo	L3	Hidalgo	1	Ubicada en la Alcaldia Cuauhtemoc.	
+Juarez	L3	Benito Juarez	0	Ubicada en la Alcaldia Cuauhtemoc.	
+Balderas	L3	Canon	1	Ubicada en la Alcaldia Cuauhtemoc.	
+Ninos Heroes/Poder Judicial CDMX	L3	Guirnalda de honor	0	Ubicada en la Alcaldia Cuauhtemoc.	
+Hospital General	L3	Cruz	0	Ubicada en la Alcaldia Cuauhtemoc.	
+Centro Medico	L3	Simbolo de Medicina	1	Ubicada en la Alcaldia Cuauhtemoc.	
+Etiopia/Plaza de la Transparencia	L3	Leon	0	Ubicada en la Alcaldia Benito Juarez.	
+Eugenia	L3	ciguena	0	Ubicada en la Alcaldia Benito Juarez.	
+Division del Norte	L3	General Francisco Villa	0	Ubicada en la Alcaldia Benito Juarez.	
+Zapata	L3	Zapata	1	Ubicada en la Alcaldia Benito Juarez.	
+Coyoacan	L3	Coyote	0	Ubicada en la Alcaldia Benito Juarez.	
+Viveros/Derechos Humanos	L3	Planta	0	Ubicada entre las Alcaldias Alvaro Obreg�n y Coyoacan.	
+Miguel Anguel de Quevedo	L3	Arbol	0	Ubicada en la Alcaldia Coyoacan.	
+Copilco	L3	Serpiente	0	Ubicada en la Alcaldia Coyoacan.	
+Universidad	L3	Escudo UNAM	0	Ubicada en la Alcaldia Coyoacan.	
