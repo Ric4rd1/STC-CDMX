@@ -131,6 +131,7 @@ Se utilizan estructuras de datos diferentes:
 Para este problema se utilizó un algoritmo de tipo bubble sort, para poder organizar las líneas por orden de menor km a mayor km. Se decidió utilizar este método de ordenación por Bubble Sort  ya que es un algoritmo simple de entender e implementar, también por la eficiencia en listas pequeñas como es `lines` (tiene 12 elementos), y también requere poca memoria adicional  lo que significa que ordena la lista sin necesidad de una memoria auxiliar significativa. Solo necesita una cantidad constante de memoria adicional para realizar las comparaciones y las operaciones de intercambio. Finalmente también por la estabilidad que ofrece.
 
 ### Usa un árbol adecuado para resolver un problema
+Se utilizan arboles AVL para que se mantenga el arbol balanceado y por lo tanto la complejidad de acceso, busqueda y eliminación sean eficientes.
 
 ## SICT0303B: Implementa acciones científicas
 ### Implementa mecanismos para consultar información de las estructuras correctos y útiles dentro de un programa.
