@@ -1,0 +1,123 @@
+$$$--LOADED LINES--$$$
+Number of lines: 12
+Name	NumStations	NumTrains	Color			Length (KM)
+--------------------------------------------------------------------------------
+L2		24			41			Azul			23431
+L4		10			14			Cian			10747
+L7		14			32			Naranja			18784
+L9		12			34			Cafe			15375
+L1		20			50			Rosa Mexicano			18828
+L8		19			30			Verde			20078
+LB		21			36			Verde y Gris			23722
+L5		13			25			Amarillo			15675
+L3		21			54			Verde Olivo			23609
+L12		20			30			Oro			25100
+L6		11			15			Rojo			13947
+LA		10			33			Morado			17192
+
+$$$--SORTED BY NAME--$$$
+Number of lines: 12
+Name	NumStations	NumTrains	Color			Length (KM)
+--------------------------------------------------------------------------------
+L1		20			50			Rosa Mexicano			18828
+L2		24			41			Azul			23431
+L3		21			54			Verde Olivo			23609
+L4		10			14			Cian			10747
+L5		13			25			Amarillo			15675
+L6		11			15			Rojo			13947
+L7		14			32			Naranja			18784
+L8		19			30			Verde			20078
+L9		12			34			Cafe			15375
+LA		10			33			Morado			17192
+LB		21			36			Verde y Gris			23722
+L12		20			30			Oro			25100
+
+$$$--SORTED BY LENGHT--$$$
+Number of lines: 12
+Name	NumStations	NumTrains	Color			Length (KM)
+--------------------------------------------------------------------------------
+L4		10			14			Cian			10747
+L6		11			15			Rojo			13947
+L9		12			34			Cafe			15375
+L5		13			25			Amarillo			15675
+LA		10			33			Morado			17192
+L7		14			32			Naranja			18784
+L1		20			50			Rosa Mexicano			18828
+L8		19			30			Verde			20078
+L2		24			41			Azul			23431
+L3		21			54			Verde Olivo			23609
+LB		21			36			Verde y Gris			23722
+L12		20			30			Oro			25100
+
+$$$--SORTED BY NUMBER OF STATIONS--$$$
+Number of lines: 12
+Name	NumStations	NumTrains	Color			Length (KM)
+--------------------------------------------------------------------------------
+L4		10			14			Cian			10747
+LA		10			33			Morado			17192
+L6		11			15			Rojo			13947
+L9		12			34			Cafe			15375
+L5		13			25			Amarillo			15675
+L7		14			32			Naranja			18784
+L8		19			30			Verde			20078
+L1		20			50			Rosa Mexicano			18828
+L12		20			30			Oro			25100
+LB		21			36			Verde y Gris			23722
+L3		21			54			Verde Olivo			23609
+L2		24			41			Azul			23431
+
+$$$--SORTED BY NUMBER OF TRAINS--$$$
+Number of lines: 12
+Name	NumStations	NumTrains	Color			Length (KM)
+--------------------------------------------------------------------------------
+L4		10			14			Cian			10747
+L6		11			15			Rojo			13947
+L5		13			25			Amarillo			15675
+L8		19			30			Verde			20078
+L12		20			30			Oro			25100
+L7		14			32			Naranja			18784
+LA		10			33			Morado			17192
+L9		12			34			Cafe			15375
+LB		21			36			Verde y Gris			23722
+L2		24			41			Azul			23431
+L1		20			50			Rosa Mexicano			18828
+L3		21			54			Verde Olivo			23609
+
+$$$--L1 MAP--$$$
+|| L1 Map: 
+#[Observatorio <-> Tacubaya <-> Juanacatlan <-> Chapultepec <-> Sevilla <-> Insurgentes <-> Cuautemoc <-> Balderas <-> Salto del Agua <-> Isabel la Catolica <-> Pino Suarez <-> Merced <-> Candelaria <-> San Lazaro <-> Moctezuma <-> Balbuena <-> Boulevard Puerto Aereo <-> Gomez Farias <-> Zaragoza <-> Pantitlan]#
+$$$--L2 MAP--$$$
+|| L2 Map: 
+#[Cuatro Caminos <-> Panteones <-> Tacuba <-> Cuitlahuac <-> Popotla <-> Colegio Militar <-> Normal <-> San Cosme <-> Revolucion <-> Hidalgo <-> Bellas Artes <-> Allende <-> Zocalo/Tenochtitlan <-> Pino Suarez <-> San Antonio Abad <-> Chabacano <-> Viaducto <-> Xola <-> Villa de Cortes <-> Nativitas <-> Portales <-> Ermita <-> General Anaya <-> Tasquena]#
+$$$--L3 MAP--$$$
+|| L3 Map: 
+#[Indios Verdes <-> Deportivo 18 de Marzo <-> Portero <-> La Raza <-> Tlatelolco <-> Guerrero <-> Hidalgo <-> Juarez <-> Balderas <-> Ninos Heroes/Poder Judicial CDMX <-> Hospital General <-> Centro Medico <-> Etiopia/Plaza de la Transparencia <-> Eugenia <-> Division del Norte <-> Zapata <-> Coyoacan <-> Viveros/Derechos Humanos <-> Miguel Anguel de Quevedo <-> Copilco <-> Universidad]#
+
+$$$--OBTAINING INFO FROM: 'TACUBAYA' STATION--$$$
+| Name: Tacubaya
+| Line: L1
+| Icon: Jarron
+| Conection: 1
+| Location: Ubicada en la Alcaldia Miguel Hidalgo.	
+
+$$$--OBTAINING INFO FROM: 'VIADUCTO' STATION--$$$
+| Name: Viaducto
+| Line: L2
+| Icon: Trebol
+| Conection: 0
+| Location: Ubicada en la Alcadia Benito Juarez.	
+
+$$$--OBTAINING INFO FROM: 'BELLAS ARTES' STATION--$$$
+| Name: Bellas Artes
+| Line: L2
+| Icon: Palacio
+| Conection: 1
+| Location: Ubicada en la Alcaldia Cuauhtemoc.	
+
+$$$--OBTAINING INFO FROM: 'OBSERVATORIO' STATION--$$$
+| Name: Observatorio
+| Line: L1
+| Icon: Observatorio
+| Conection: 0
+| Location: Ubicada en la Alcaldia Alvaro Obregon.	
+

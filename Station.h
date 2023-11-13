@@ -51,8 +51,8 @@ class Station {
         //Methods
         void loadStations(std::string);
         
-        friend class DList;
-        friend class Stc;
+        //friend class DList;
+        //friend class Stc;
 
 };
 

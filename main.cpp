@@ -10,7 +10,10 @@
 #include <vector>
 #include <cstring>
 #include <list>
+#include <fstream>
+#include <algorithm>
 
+#include "dlist.h"
 #include "unit.h"
 #include "Stc.h"
 //#include "dlist.h"
@@ -41,7 +44,7 @@ std::string listToString(const std::list<T> &v) {
 	return aux.str();
 }
 
-class SortsTest: public UnitTest {
+class Test: public UnitTest {
     public:
         void runTest(){
 			Stc stc;
@@ -139,21 +142,97 @@ L12 20 30 Oro 25100\n\
 			cout << "\n" <<"11.- EXPECTED\n" << ans << " \nPROGRAM\n" << stc.getStation("Viaducto") << "\n";
 			cout <<	(!ans.compare(stc.getStation("Viaducto")) ? " #######SUCCESS#######\n" : " #######FAIL#######\n");
 
-			//DList<int> list;
-			/*
-			cout << endl;
-			cout << "Lines sorted by length in Km: " << endl;
-			stc.sortLinesLength();
-			stc.showLines();
-			cout << endl;
-			stc.showStations();
-			*/
+			/* TEST 12*/
+			std::cout << "\n" << "12.- Testing loadStationDlist method..." << "\n";
+			stc.loadStationDList("Stations.txt");
+			std::cout << " #######SUCCESS#######\n";
+
+			/* TEST 13*/
+			ans = "|| L1 Map: \n\
+#[Observatorio <-> Tacubaya <-> Juanacatlan <-> Chapultepec <-> Sevilla <-> Insurgentes <-> Cuautemoc <-> Balderas <-> Salto del Agua <-> Isabel la Catolica <-> Pino Suarez <-> Merced <-> Candelaria <-> San Lazaro <-> Moctezuma <-> Balbuena <-> Boulevard Puerto Aereo <-> Gomez Farias <-> Zaragoza <-> Pantitlan]#";
+			cout << "\n" <<"13.- EXPECTED\n" << ans << " \nPROGRAM\n" << stc.getLineMap("L1") << "\n";
+			cout <<	(!ans.compare(stc.getLineMap("L1")) ? " #######SUCCESS#######\n" : " #######FAIL#######\n");
+
+			/* TEST 14*/
+			ans = "|| L2 Map: \n\
+#[Cuatro Caminos <-> Panteones <-> Tacuba <-> Cuitlahuac <-> Popotla <-> Colegio Militar <-> Normal <-> San Cosme <-> Revolucion <-> Hidalgo <-> Bellas Artes <-> Allende <-> Zocalo/Tenochtitlan <-> Pino Suarez <-> San Antonio Abad <-> Chabacano <-> Viaducto <-> Xola <-> Villa de Cortes <-> Nativitas <-> Portales <-> Ermita <-> General Anaya <-> Tasquena]#";
+			cout << "\n" <<"14.- EXPECTED\n" << ans << " \nPROGRAM\n" << stc.getLineMap("L2") << "\n";
+			cout <<	(!ans.compare(stc.getLineMap("L2")) ? " #######SUCCESS#######\n" : " #######FAIL#######\n");
+			
+			/* TEST 15*/
+			//stc.sortLines();
+			//cout << stc.linestoString() << "\n";
+
         }
 };
 
 int main (){
-    SortsTest test;
+    Test test;
     test.runTest();
+
+	Stc stc;
+	stc.loadLines("Lines.txt");
+	stc.loadStations("Stations.txt");
+	stc.loadStationDList("Stations.txt");
+
+	ofstream outputFile;
+	outputFile.open("output.txt");
+
+	outputFile << "$$$--LOADED LINES--$$$"<< endl;
+	outputFile << stc.linestoString2();
+	outputFile << endl;
+
+	outputFile << "$$$--SORTED BY NAME--$$$" << endl;
+	stc.sortLinesName();
+	outputFile << stc.linestoString2();
+	outputFile << endl;
+
+	outputFile << "$$$--SORTED BY LENGHT--$$$" << endl;
+	stc.sortLinesLength();
+	outputFile << stc.linestoString2();
+	outputFile << endl;
+
+	outputFile << "$$$--SORTED BY NUMBER OF STATIONS--$$$" << endl;
+	stc.sortLinesNumStations();
+	outputFile << stc.linestoString2();
+	outputFile << endl;
+
+	outputFile << "$$$--SORTED BY NUMBER OF TRAINS--$$$" << endl;
+	stc.sortLinesNumTrains();
+	outputFile << stc.linestoString2();
+	outputFile << endl;
+
+	outputFile << "$$$--L1 MAP--$$$" << endl;
+	outputFile << stc.getLineMap("L1");
+	outputFile << endl;
+
+	outputFile << "$$$--L2 MAP--$$$" << endl;
+	outputFile << stc.getLineMap("L2");
+	outputFile << endl;
+
+	outputFile << "$$$--L3 MAP--$$$" << endl;
+	outputFile << stc.getLineMap("L3");
+	outputFile << endl;
+
+	outputFile << endl;
+
+	outputFile << "$$$--OBTAINING INFO FROM: 'TACUBAYA' STATION--$$$" << endl;
+	outputFile << stc.getStation("Tacubaya");
+	outputFile << endl;
+
+	outputFile << "$$$--OBTAINING INFO FROM: 'VIADUCTO' STATION--$$$" << endl;
+	outputFile << stc.getStation("Viaducto");
+	outputFile << endl;
+
+	outputFile << "$$$--OBTAINING INFO FROM: 'BELLAS ARTES' STATION--$$$" << endl;
+	outputFile << stc.getStation("Bellas Artes");
+	outputFile << endl;
+
+	outputFile << "$$$--OBTAINING INFO FROM: 'OBSERVATORIO' STATION--$$$" << endl;
+	outputFile << stc.getStation("Observatorio");
+	outputFile << endl;
+
+
 	
     return 0;
 }

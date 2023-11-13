@@ -10,6 +10,7 @@
 
 #include <string>
 #include <sstream>
+#include <iostream>
 #include "exception.h"
 
 template <class T> class DList;
@@ -235,15 +236,16 @@ std::string DList<T>::toString() const {
 	DLink<T> *p;
 
 	p = head;
-	aux << "[";
+	aux << "#[";
 	while (p != 0) {
 		aux << p->value;
 		if (p->next != 0) {
-			aux << ", ";
+			aux << " <-> ";
 		}
 		p = p->next;
 	}
-	aux << "]";
+	aux << "]#";
+
 	return aux.str();
 }
 
