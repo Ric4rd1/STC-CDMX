@@ -32,16 +32,16 @@ La clase cuenta con los siguentes métodos:
 	- **O(n)** : Recorre con un cíclo for dependiendo de n elementos
 
 - `void sortLinesLength()` : organiza las líneas de menor a mayor conforme a la distancia en km.
-	- ** O(n^2)** : Al usar Bubble sort se tienen dos cíclos for anidados, por lo tanto su complejidad es cuadratica. En su mejor caso (cuando ya esta ordenado) su complejidad es de O(n)
+	- **O(n^2)** : Al usar Bubble sort se tienen dos cíclos for anidados, por lo tanto su complejidad es cuadratica. En su mejor caso (cuando ya esta ordenado) su complejidad es de O(n)
 
 - `void sortLinesName()` : organiza las líneas de menor a mayor según el nombre (de L1 a L12).
-	- ** O(n^2)** : Al usar Bubble sort se tienen dos cíclos for anidados, por lo tanto su complejidad es cuadratica. En su mejor caso (cuando ya esta ordenado) su complejidad es de O(n)
+	- **O(n^2)** : Al usar Bubble sort se tienen dos cíclos for anidados, por lo tanto su complejidad es cuadratica. En su mejor caso (cuando ya esta ordenado) su complejidad es de O(n)
 
 - `void sortLinesNumStations()` : organiza las líneas de menor a mayor según el número de estaciones que tiene.
-	- ** O(n^2)** : Al usar Bubble sort se tienen dos cíclos for anidados, por lo tanto su complejidad es cuadratica. En su mejor caso (cuando ya esta ordenado) su complejidad es de O(n)
+	- **O(n^2)** : Al usar Bubble sort se tienen dos cíclos for anidados, por lo tanto su complejidad es cuadratica. En su mejor caso (cuando ya esta ordenado) su complejidad es de O(n)
 
 - `voidsortLinesNumTrains()` : organiza las líneas de menor a mayro según el número de trenes que tiene.
-	- ** O(n^2)** : Al usar Bubble sort se tienen dos cíclos for anidados, por lo tanto su complejidad es cuadratica. En su mejor caso (cuando ya esta ordenado) su complejidad es de O(n)
+	- **O(n^2)** : Al usar Bubble sort se tienen dos cíclos for anidados, por lo tanto su complejidad es cuadratica. En su mejor caso (cuando ya esta ordenado) su complejidad es de O(n)
 
 - `string linestoString()` : regresa las lineas en un string.
 	- **O(n)** : se usa un cíclo for para al ir recorriendolo este también se imprima
@@ -113,9 +113,9 @@ Se hace el analisis asintótico en la parte superior de las estructuras de datos
 ### Hace un análisis de complejidad correcto y completo para todos los demás componentes del programa y determina la complejidad final del programa.
 Al explicar cada funcion se hace un análisis de complejidad. 
 El analisis de complejidad general del programa **O(n^2)**: Esta aproximación se basa principalmente en las operaciones de ordenamiento cuadrático que se realizan en las líneas (Sorts). Estas son las acciones más costosas. Cabe mencionar que podría cambiar en caso de que el número de elementos aumentara de manera muy grande(no es un problema ya que el número de estaciones no cambiará).
-	- La complejidad total dependerá del tamaño de los conjuntos de datos involucrados (número de líneas y estaciones).
-	- La operación más costosa es el ordenamiento de líneas, que es cuadrático y podría ser ineficiente si es que la cantidad de elementos subiera.
-	- Las operaciones de carga y manipulación de estaciones tienen complejidad lineal o constante.
+- La complejidad total dependerá del tamaño de los conjuntos de datos involucrados (número de líneas y estaciones).
+- La operación más costosa es el ordenamiento de líneas, que es cuadrático y podría ser ineficiente si es que la cantidad de elementos subiera.
+- Las operaciones de carga y manipulación de estaciones tienen complejidad lineal o constante.
 
 ## SICT0302B: Toma decisiones
 ### Selecciona y usa una estructura lineal adecuada al problema
