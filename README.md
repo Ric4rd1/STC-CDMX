@@ -3,13 +3,21 @@ Este proyecto es similar a aplicaciónes como Google Maps, Waze, Moovit y Magic 
 El objetivo principal es analizar el sistema de metro de la CDMX para obtener información valiosa de las rutas mediante algoritmos y estructuras de datos vistos en clase.
 ## Introducción
 El sistema de transporte colectivo metro de la CDMX se confroma de 12 líneas y 195 estaciónes. Cada línea se enumeran con números o letras (L1,L2,L3, L4, L5, L6, L7, L8, L9, LA, LB, L12) y tienen un color correspondiente. Las estaciones al igual tienen un color que corresponde a la línea a la que pertenecen, pueden tener más de un color cuando esta tiene correspondencia. Las estaciones tambien tienen un icono que los representa y nombre .Las lineas de metro contienen estaciones y trenes que viajan entre ellas.
+## Importante❗❗❗ ##
+- Esta es una **implementación parcial**, solo estan implementadas las lines L1, L2, L3
+- El programa distingue entre mayúsculas y minúsculas
+- **NO** se debe usar acentos ni la letra 'ñ', usar en vez la 'n'
+
+### Ejecutables 👩‍💻 ###
+Hay dos archivos .cpp
+- `main.cpp` :  Contiene el programa para el usuario, tiene un menú para acceder a todas la funciones del codigo. Poner atención a los comentarios que se dan.
+- `tests.cpp` : Contiene test cases para corroborar el funcionamiento correcto del codigo.
 
 ### Clases
 Existen __ clases interacutando entre sí en este proyecto:
 - `Stc`  🚇
 - `Line`  🗺
 - `Station`  🚉
-- `Train`  🚄
 
 #### Stc🚇
 Esta es la clase principal donde se realizan la mayoría de las funciones. La clase `Stc` cuenta con las siguentes variables de estado:
@@ -18,6 +26,7 @@ Esta es la clase principal donde se realizan la mayoría de las funciones. La cl
 - `L1Stations`
 - `...`					Listas dobles que guardan los nombres de las estaciones. Estas listas estan insertadas en orden de modo que al reccorrer la lista es de igual manera de como se hace en la realidad.
 - `L12Stations` 
+- `graph`: objeto de la clase `Graph` que contiene un grafo de las lineas L1, L2, L3.
 
 La clase cuenta con los siguentes métodos:
 - Constructor por default.
@@ -60,6 +69,12 @@ La clase cuenta con los siguentes métodos:
 
 - `string getLineMap(String line)` : Despliega el mapa de la linea, osea el orden en el que los trenes viajan.
 	- **O(n)** : se utiliza un cíclo while que recorre la lista e ir imprimiendo las estaciónes en un formato hasta que termine
+	
+- `void loadGraph(vector<vector<int>>, int)`: carga la matriz de adyacencia y la lista de adyacencia (`loadGraphMat` y `loadGraphList` )
+	- **O(n)**: recorre el vector elemento por elemento y añade edges por cada uno
+
+- `string findPath(int start, int end)` : Usa Breadth First Search para buscar la ruta más eficiente
+	- **O(V + E)** : donde **V** es el número de vertices (nodos) y **E** el número de edges
 
 #### Line 🗺
 La clase `Line` cuenta con las siguentes variables de estado:
@@ -75,9 +90,7 @@ La clase cuenta con los siguentes métodos:
 - Constructor por default
 - Constructor con parametros (`name`, `numStations`, `numTrains`, `color`, `length`)
 - Constructor de copia
-- `void addTrain(Train t)` : Agrega un tren a trains
 - `void removeStation(Station s)` : Elimina una estación de stations
-- `void removeTrain(Train t)` : Elimina una estación de stations
 
 ### Station🚉
 La clase `Station` cuenta con las siguentes variables de estado:
@@ -144,11 +157,11 @@ Dentro de la clase `Stc` se tienen los siguentes métodos para consultar informa
 - `getStation(string)` : devuelve toda la información de la estación dada.
 
 ### Implementa mecanismos de lectura de archivos correctos y útiles dentro de un programa.
-Se utilizan 2 archivos de texto delimitados por Tabs ("Lines.txt" y "Stations.txt") para hacer una lectura de ellos e instanciar los objetos de `Line` y `Station`.
+Se utilizan multiples archivos de texto delimitados por Tabs ("Lines.txt", "Stations.txt", "locationGraph.txt", "stcGraph.txt") para hacer una lectura de ellos e instanciar los objetos de `Line`, `Station`, y crear el grafo `graph`. 
 
 ### Implementa mecanismos de escritura de archivos para guardar los datos de las estructuras de manera correcta.
 
-Se crea un archivo de salida llamado `outputFile.txt` donde se hace la escritura de los datos obtenidos de forma ordenada.
+Se crea un archivo de salida llamado `outputFile.txt` donde se hace la escritura de los datos obtenidos de forma ordenada. **No se escribe sobre ningúno de los archivos txt del metro ya que es estatico, osea no cambia.**
 
 
 ## Recursos
