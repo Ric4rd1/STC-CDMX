@@ -198,6 +198,9 @@ int main(){
         }
         else if(option == 4){
             std::cout << "Getting shortest path...\n";
+            std::cout << "(Example1: Station A:'Insurgentes', Station B: 'Colegio Militar')\n";
+            std::cout << "(Example2: Station A:'Tlatelolco', Station B: 'Xola')\n";
+            std::cout << "(Example3: Station A:'Universidad', Station B: 'Zapata')\n";
             std::cout << "Enter station A: ";
             std::string stationA;
             std::getline(std::cin, stationA);
