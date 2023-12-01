@@ -9,7 +9,6 @@
 #define STATION_H_
 
 #include "exception.h"
-#include "Train.h"
 #include "Line.h"
 
 #include <vector>
@@ -47,37 +46,8 @@ class Station {
         void setIcon(std::string icon) {this->icon = icon;}
         void setConection(bool conection) {this->conection = conection;}
         void setLocation(std::string location) {this->location = location;}
-        
-        //Methods
-        void loadStations(std::string);
-        
-        //friend class DList;
-        //friend class Stc;
 
 };
-
-/*
-void Station::loadStations(std::string fileName) {
-    std::ifstream file(fileName);
-    std::string line;
-    std::string name;
-    std::string icon;
-    std::string IDStation;
-
-    if (file.is_open()) {
-        while (getline(file, line)) {
-            std::stringstream ss(line);
-            getline(ss, IDStation, ',');
-            getline(ss, name, ',');
-            getline(ss, icon, ',');
-            add(std::stoi(IDStation), name, icon);
-        }
-        file.close();
-    } else {
-        throw FileNotFound();
-    }
-}
-*/
 
 Station::Station() {
     name = "";
