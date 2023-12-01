@@ -1,5 +1,5 @@
 /*
- * main.cpp
+ * 	tests.cpp
  *
  *  Created on: 14/09/23
  *      Author: ric4rd
@@ -14,9 +14,9 @@
 #include <algorithm>
 
 #include "dlist.h"
+#include "graphQ.h"
 #include "unit.h"
 #include "Stc.h"
-//#include "dlist.h"
 
 template <class T>
 std::string arrayToString(const std::vector<T> &v) {
@@ -160,8 +160,67 @@ L12 20 30 Oro 25100\n\
 			cout <<	(!ans.compare(stc.getLineMap("L2")) ? " #######SUCCESS#######\n" : " #######FAIL#######\n");
 			
 			/* TEST 15*/
-			//stc.sortLines();
-			//cout << stc.linestoString() << "\n";
+			std::cout << "\n" << "15.- Testing loadGraph 'g.txt'..." << "\n";
+			//std::string g_input = "(0,1) (0,4) (1,2) (1,3) (3,6) (4,5)";
+			std::vector<std::vector<int>> g_listInput = {{0, 1}, {0, 4}, {1, 2}, {1, 3}, {3, 6}, {4, 5}};
+			stc.loadGraph(g_listInput, 7);
+			std::cout << " #######SUCCESS#######\n";
+
+			/* TEST 16*/
+			ans = "visited: 0 1 4 2 3 5 6 path: 0 1 3 6";
+			std::cout << "\n" << "16.- Testing findPath..." << "\n";
+			cout << "16.- EXPECTED\n" << ans << " \nPROGRAM\n" << stc.findPath(0, 6) << "\n";
+			cout <<	(!ans.compare(stc.findPath(0, 6)) ? " #######SUCCESS#######\n" : " #######FAIL#######\n");
+
+			/* TEST 17*/
+			//insurgentes a revolución 6, 26
+			std::cout << "\n" << "17.- Testing loadGraph 'stcGraph.txt'..." << "\n";
+			//std::string input = "(1, 2) (2, 3) (3, 4) (4, 5) (5, 6) (6, 7) (7, 8) (8, 9) (9, 10) (10, 11) (11, 12) (12, 13) (13, 14) (14, 15) (15, 16) (16, 17) (17, 18) (18, 19) (19, 20) (20, 21) (21, 22) (22, 23) (23, 24) (24, 25) (25, 26) (26, 27) (27, 28) (28, 29) (29, 30) (30, 31) (31, 32) (32, 33) (33, 11) (11, 35) (35, 36) (36, 37) (37, 38) (38, 39) (39, 40) (40, 41) (41, 42) (42, 43) (43, 44) (45, 46) (46, 47) (47, 48) (48, 49) (49, 50) (50, 30) (30, 52) (52, 8) (8, 54) (54, 55) (55, 56) (56, 57) (57, 58) (58, 59) (59, 60) (60, 61) (61, 62) (62, 63) (63, 64) (64, 65)";
+			std::vector<std::vector<int>> listInput = {{1, 2}, {2, 3}, {3, 4}, {4, 5}, {5, 6}, {6, 7}, {7, 8}, {8, 9}, {9, 10}, {10, 11}, {11, 12}, {12, 13}, {13, 14}, {14, 15}, {15, 16}, {16, 17}, {17, 18}, {18, 19}, {19, 20}, {20, 21}, {21, 22}, {22, 23}, {23, 24}, {24, 25}, {25, 26}, {26, 27}, {27, 28}, {28, 29}, {29, 30}, {30, 31}, {31, 32}, {32, 33}, {33, 11}, {11, 35}, {35, 36}, {36, 37}, {37, 38}, {38, 39}, {39, 40}, {40, 41}, {41, 42}, {42, 43}, {43, 44}, {45, 46}, {46, 47}, {47, 48}, {48, 49}, {49, 50}, {50, 30}, {30, 52}, {52, 8}, {8, 54}, {54, 55}, {55, 56}, {56, 57}, {57, 58}, {58, 59}, {59, 60}, {60, 61}, {61, 62}, {62, 63}, {63, 64}, {64, 65}};
+			stc.loadGraph(listInput, 70);
+			std::cout << " #######SUCCESS#######\n";
+
+			/* TEST 18*/
+			ans = "visited: 6 5 7 4 8 3 9 52 54 2 10 30 55 1 11 29 31 50 56 12 33 35 28 32 49 57 13 36 27 48 58 14 37 26 path: 6 7 8 52 30 29 28 27 26";
+			std::cout << "\n" << "18.- Testing findPath(6, 26)..." << "\n";
+			//insurgentes a revolución 6, 26
+			cout << "18.- EXPECTED\n" << ans << " \nPROGRAM\n" << stc.findPath(6, 26) << "\n";
+			cout <<	(!ans.compare(stc.findPath(6, 26)) ? " #######SUCCESS#######\n" : " #######FAIL#######\n");
+
+			/* TEST 19*/
+			ans = "[ Insurgentes -->  Cuautemoc -->  Balderas -->  Juarez -->  Hidalgo -->  Revolucion -->  San Cosme -->  Normal -->  Colegio Militar --> ARRIVED ]";
+			std::cout << "\n" << "19.- Testing printPath(Insurgentes '6', Colegio Militar '26')..." << "\n";
+			//insurgentes a revolución 6, 26
+			cout << "19.- EXPECTED\n" << ans << " \nPROGRAM\n" << stc.printPath(stc.findPath(6, 26)) << "\n";
+			cout <<	(!ans.compare(stc.printPath(stc.findPath(6, 26))) ? " #######SUCCESS#######\n" : " #######FAIL#######\n");
+			
+			/* TEST 20*/
+			ans = "visited: 55 54 56 8 57 7 9 52 58 6 10 30 59 5 11 29 31 50 60 4 12 33 path: 55 54 8 9 10 11 33";
+			std::cout << "\n" << "20.- Testing findPath(Hospital General to Zocalo/Tenochtitlan)..." << "\n";
+			//Hospital General to Zocalo 55, 33
+			cout << "20.- EXPECTED\n" << ans << " \nPROGRAM\n" << stc.findPath(55, 33) << "\n";
+			cout <<	(!ans.compare(stc.findPath(55, 33)) ? " #######SUCCESS#######\n" : " #######FAIL#######\n");
+
+			/* TEST 21*/
+			ans = "[ Hospital General -->  Ninos Heroes/Poder Judicial CDMX -->  Balderas -->  Salto del Agua -->  Isabel la Catolica -->  Pino Suarez -->  Zocalo/Tenochtitlan --> ARRIVED ]";
+			std::cout << "\n" << "21.- Testing printPath(Hospital General '55', Zocalo/Tenochtitlan '33')..." << "\n";
+			//Hospital General to Zocalo 55, 33
+			cout << "21.- EXPECTED\n" << ans << " \nPROGRAM\n" << stc.printPath(stc.findPath(55, 33)) << "\n";
+			cout <<	(!ans.compare(stc.printPath(stc.findPath(55, 33))) ? " #######SUCCESS#######\n" : " #######FAIL#######\n");
+
+			/* TEST 22*/
+			ans = "visited: 27 26 28 25 29 24 30 23 31 50 52 22 32 49 8 21 33 48 7 9 54 20 11 47 6 10 55 19 12 35 46 5 56 18 13 36 path: 27 28 29 30 31 32 33 11 35 36";
+			std::cout << "\n" << "22.- Testing findPath(Normal '27', Chabacano '36')..." << "\n";
+			//Normal to Chabacano 27, 36
+			cout << "22.- EXPECTED\n" << ans << " \nPROGRAM\n" << stc.findPath(27, 36) << "\n";
+			cout <<	(!ans.compare(stc.findPath(27, 36)) ? " #######SUCCESS#######\n" : " #######FAIL#######\n");
+
+			/* TEST 23*/
+			ans = "[ Normal -->  San Cosme -->  Revolucion -->  Hidalgo -->  Bellas Artes -->  Allende -->  Zocalo/Tenochtitlan -->  Pino Suarez -->  San Antonio Abad -->  Chabacano --> ARRIVED ]";
+			std::cout << "\n" << "23.- Testing printPath(Normal to Chabacano)..." << "\n";
+			//Normal to Chabacano 27, 36
+			cout << "23.- EXPECTED\n" << ans << " \nPROGRAM\n" << stc.printPath(stc.findPath(27, 36)) << "\n";
+			cout <<	(!ans.compare(stc.printPath(stc.findPath(27, 36))) ? " #######SUCCESS#######\n" : " #######FAIL#######\n");
 
         }
 };
@@ -232,7 +291,6 @@ int main (){
 	outputFile << stc.getStation("Observatorio");
 	outputFile << endl;
 
-
-	
+	outputFile.close();
     return 0;
 }
