@@ -9,13 +9,13 @@
 #define Stc_H_
 
 #include "dlist.h"
+#include "graphQ.h"
 #include "exception.h"
 #include "Line.h"
 #include "Station.h"
 #include "Train.h"
 
 #include <algorithm>
-#include <vector>
 #include <list>
 #include <string>
 #include <fstream>
@@ -30,6 +30,9 @@ using namespace std;
 class Stc {
     private:
         std::vector<Line> lines;
+        Graph graph;
+        std::vector<std::pair<std::string, int>> locationCode;
+        std::string locationArray[100];
         //std::list <Station> stations;
         //stations map
         std::map<std::string, Station> stations;
@@ -85,6 +88,7 @@ class Stc {
         void addStation(Station);
         void loadStations(std::string);
         void showStations() const;
+        std::string stationsToString() const;
         std::string getStationLine(std::string) const;
         std::string getStationIcon(std::string) const;
         bool getStationConection(std::string) const;
@@ -95,11 +99,20 @@ class Stc {
         void loadStationDList(std::string);
         std::string getLineMap(std::string) const;
 
+        //Stations Graph
+        void loadGraph(std::vector<std::vector<int>>, int);
+        void loadLocations(std::string);
+        std::string findPath(int, int);
+        std::string printPath(const std::string&);
+        std::string getShortestPath(std::string, std::string);
+
+
 };
 
 Stc::Stc() {
     lines = {};
     stations = {};
+    loadLocations("locationGraph.txt");
 
 }
 
@@ -166,6 +179,15 @@ void Stc::showLines() {
     for (int i = 0; i < lines.size(); i++){
         cout << lines[i].getName() << " " << lines[i].getNumStations() << " " << lines[i].getNumTrains() << " " << lines[i].getColor() << " " << lines[i].getLength() << endl;
     }
+}
+
+std::string Stc :: stationsToString() const {
+    std::stringstream aux;
+    aux << "Number of stations: " << stations.size() << std::endl;
+    for (auto it = stations.begin(); it != stations.end(); ++it) {
+        aux << "[ " << it->first << " ]"<<std::endl;
+    }
+    return aux.str();
 }
 
 /*
@@ -350,11 +372,16 @@ std::string Stc::getStationLocation(std::string name) const {
 //Display all the staition information
 std::string Stc::getStation(std::string name) const {
     std::stringstream aux;
+    if (stations.find(name) == stations.end()) {
+    aux << "Station not found" << std::endl;
+    } else {
     aux << "| Name: " << name << std::endl;
     aux << "| Line: " << getStationLine(name) << std::endl;
     aux << "| Icon: " << getStationIcon(name) << std::endl;
     aux << "| Conection: " << getStationConection(name) << std::endl;
     aux << "| Location: " << getStationLocation(name) << std::endl;
+    }
+
     return aux.str();
 }
 
@@ -462,5 +489,92 @@ std::string Stc::getLineMap(std::string line) const {
     }
     return aux.str();
 }
+
+void Stc::loadGraph(std::vector<std::vector<int>> data, int a) {
+    graph.loadGraphMat(data, a, a);
+    graph.loadGraphList(data, a);
+    //cout << graph.printAdjMat();
+}
+
+std::string Stc::findPath(int start, int end) {
+    std::stringstream aux;
+    aux << graph.BFS(start, end);
+
+    return aux.str();
+}
+
+void Stc::loadLocations(std::string fileName){
+    std::string name;
+    std::string code;
+
+    int numLines = 0; //number of lines
+    ifstream file(fileName); //opening the file.
+
+    //checking if the file is open
+    if (file.is_open()){
+        //while the file is not at the end of the file
+        while(!file.eof()){
+            //reading the file
+            getline(file, name, '\t');
+            getline(file, code, '\n'); //new line
+        
+        //adding the station to the DList depending on which line it belongs to
+        locationCode.push_back(make_pair(name, stoi(code)));
+        locationArray[stoi(code)] = name;
+        //cout << "Array index: " << stoi(code) << " with name: " << locationArray[stoi(code)] << endl;
+        //cout << locationCode[numLines].first << " " << locationCode[numLines].second << endl;
+
+        numLines++; 
+        }  
+        file.close(); //closing the file
+    } else {
+        cout << ("File could not be opened");
+    }
+    
+
+}
+
+std::string Stc::printPath(const std::string& path) {
+    std::stringstream aux;
+    int temp;
+    int pos = path.find("path: ")+6;
+    aux << "[ ";
+    for(int i = pos; i < path.size(); i++){
+        if (path[i] == ' '){
+            aux << " ";
+        } else {
+            temp = path[i] - '0';
+            if (path[i+1] != ' '){
+                temp = temp*10 + (path[i+1] - '0');
+                i++;
+            }
+            aux << locationArray[temp] << " --> ";
+        }  
+    }
+    aux << "ARRIVED";
+    aux << " ]";
+    return aux.str();
+
+}
+
+std::string Stc::getShortestPath(std::string stationA, std::string stationB) {
+    //use locationCode to find the code of the station and use printPath to print the path
+    std::stringstream aux;
+    int codeA;
+    int codeB;
+    for (int i = 0; i < locationCode.size(); i++){
+        if (locationCode[i].first == stationA){
+            codeA = locationCode[i].second;
+            //cout << "Code A: " << codeA << endl;
+        }
+        if (locationCode[i].first == stationB){
+            codeB = locationCode[i].second;
+            //cout << "Code B: " << codeB << endl;
+        }
+    }
+    aux << printPath(findPath(codeA, codeB));
+    return aux.str();
+}
+
 
 #endif /* Stc_H_ */
