@@ -10,7 +10,6 @@
 
 #include "exception.h"
 #include "Station.h"
-#include "Train.h"
 
 
 #include <vector>
@@ -27,9 +26,6 @@ class Line {
         int numTrains;
         std::string color;
         int length;
-        Train trainsList;
-
-        
 
     public:
         //Constructors
@@ -47,7 +43,7 @@ class Line {
         int getNumTrains() const {return numTrains;}
         std::string getColor() const {return color;}
         int getLength() const {return length;}
-        Train getTrains() const {return trainsList;}
+
 
         //Setters
         void setName(char name) {this->name = name;}
@@ -55,11 +51,7 @@ class Line {
         void setNumTrains(int numTrains) {this->numTrains = numTrains;}
         void setColor(std::string color) {this->color = color;}
         void setLength(int length) {this->length = length;}
-        void setTrains(Train trainsList) {this->trainsList = trainsList;}
 
-        //Methods
-        void addTrain(Train t);
-        void removeTrain(Train t);
 };
 
 Line::Line() {
