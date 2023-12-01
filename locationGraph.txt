@@ -1,0 +1,65 @@
+Observatorio	1
+Tacubaya	2
+Juanacatlan	3
+Chapultepec	4
+Sevilla	5
+Insurgentes	6
+Cuautemoc	7
+Balderas	8
+Salto del Agua	9
+Isabel la Catolica	10
+Pino Suarez	11
+Merced	12
+Candelaria	13
+San Lazaro	14
+Moctezuma	15
+Balbuena	16
+Boulevard Puerto Aereo	17
+Gomez Farias	18
+Zaragoza	19
+Pantitlan	20
+Cuatro Caminos	21
+Panteones	22
+Tacuba	23
+Cuitlahuac	24
+Popotla	25
+Colegio Militar	26
+Normal	27
+San Cosme	28
+Revolucion	29
+Hidalgo	30
+Bellas Artes	31
+Allende	32
+Zocalo/Tenochtitlan	33
+Pino Suarez	11
+San Antonio Abad	35
+Chabacano	36
+Viaducto	37
+Xola	38
+Villa de Cortes	39
+Nativitas	40
+Portales	41
+Ermita	42
+General Anaya	43
+Tasque�a	44
+Indios Verdes	45
+Deportivo 18 de Marzo	46
+Portero	47
+La Raza	48
+Tlatelolco	49
+Guerrero	50
+Hidalgo	30
+Juarez	52
+Balderas	8
+Ninos Heroes/Poder Judicial CDMX	54
+Hospital General	55
+Centro Medico	56
+Etiopia/Plaza de la Transparencia	57
+Eugenia	58
+Division del Norte	59
+Zapata	60
+Coyoacan	61
+Viveros/Derechos Humanos	62
+Miguel Anguel de Quevedo	63
+Copilco	64
+Universidad	65
