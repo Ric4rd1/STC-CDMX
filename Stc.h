@@ -13,7 +13,6 @@
 #include "exception.h"
 #include "Line.h"
 #include "Station.h"
-#include "Train.h"
 
 #include <algorithm>
 #include <list>
